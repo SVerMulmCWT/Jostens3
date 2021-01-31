@@ -31,6 +31,7 @@ import com.jostens.qa.pages.PaymentPage;
 import com.jostens.qa.pages.ProductDetailPage;
 import com.jostens.qa.pages.ShoppingCartPage;
 import com.jostens.qa.util.EventHandler;
+import com.jostens.qa.util.ExcelUtil;
 
 public class TestBase {
 	//Initialize BrowserStack Variable(s)
@@ -41,6 +42,7 @@ public class TestBase {
 	//Define Variable(s)
 	public static Properties prop;
 	public TestUtil genMethods;
+	public ExcelUtil excelMethods;
 	public String sheetName;
 	
 	//Variable(s) used to export script results
@@ -81,7 +83,6 @@ public class TestBase {
 	
 	@SuppressWarnings("deprecation")
 	public static void initializeDriver(String browser) {
-//		String testingBrowser = prop.getProperty("browser");
 		String testingBrowser = browser;
 		
 		//Initialize the relevant browser driver
@@ -127,7 +128,7 @@ public class TestBase {
 		//Initialize Variable(s)
 		System.out.println("Performing the script's setups (@BeforeSuite)");
 		initializeDriver(browser); //Sets up WebDriver with Listeners
-//		genMethods = new TestUtil();
+		genMethods = new TestUtil();
 	}
 	
 	@AfterSuite
@@ -137,31 +138,14 @@ public class TestBase {
 	
 	@AfterMethod
 	public void afterMethod(ITestResult result) throws IOException {
-//		genMethods = new TestUtil();
-		
 		if(result.getStatus() == ITestResult.FAILURE) {
 			//Do not output to Excel File, if performing the @Test=aloginTest, since there is no excel file for it
 			if (!result.getName().equals("aloginTest")) {
-				genMethods.setDataTableCell("Failure - " + genMethods.getCurrentDateTime(), iteration, column);
+				excelMethods.setDataTableCell("Failure - " + excelMethods.getCurrentDateTime(), iteration, column);
 			}
 			
 			reportLogger.log(LogStatus.FAIL,  "The Test Case that failed is: " + result.getName()); //adds name to ExtentReport
 			reportLogger.log(LogStatus.FAIL,  "The Test Case that failed is: " + result.getThrowable()); //adds error/exception to ExtentReport
-			
-//			String screenshotPath = genMethods.getScreenshot(eDriver, result.getName());
-//			reportLogger.log(LogStatus.FAIL,  reportLogger.addScreenCapture(screenshotPath)); //adds screenshot to ExtentReport
-//			//reportLogger.log(LogStatus.FAIL,  reportLogger.addScreencast(screenshotPath)); //adds screencast/video to ExtentReport
-			
-//			String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-//			TakesScreenshot ts = (TakesScreenshot) eDriver;
-//			File source = ts.getScreenshotAs(OutputType.FILE);
-//			
-//			String destination = System.getProperty("user.dir") + "\\screenshots\\" + result.getName() + dateName + ".png";
-//			File finalDestination = new File(destination);
-//			//FileUtils.copyFile(source, finalDestination);
-//			FileHandler.copy(source, finalDestination);
-			
-//			reportLogger.log(LogStatus.FAIL,  reportLogger.addScreenCapture(destination)); //adds screenshot to ExtentReport
 			
 			String screenshotPath = TestUtil.getScreenshot(eDriver, result.getName());
 			reportLogger.log(LogStatus.FAIL,  reportLogger.addScreenCapture(screenshotPath)); //adds screenshot to ExtentReport
@@ -171,7 +155,7 @@ public class TestBase {
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
 			//Do not output to Excel File, if performing the @Test=aloginTest, since there is no excel file for it
 			if (!result.getName().equals("aloginTest")) {
-				genMethods.setDataTableCell("Success - " + genMethods.getCurrentDateTime(), iteration, column);
+				excelMethods.setDataTableCell("Success - " + excelMethods.getCurrentDateTime(), iteration, column);
 			}
 			
 			System.out.println("The Test Case that passed is: " + result.getName());

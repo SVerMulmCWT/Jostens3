@@ -1,7 +1,5 @@
 package com.jostens.qa.util;
 
-import java.io.IOException;
-
 import org.testng.IInvokedMethod;
 import org.testng.IInvokedMethodListener;
 import org.testng.ISuite;
@@ -11,7 +9,6 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import com.jostens.qa.base.TestBase;
-import com.relevantcodes.extentreports.LogStatus;
 
 public class Listeners extends TestBase implements IInvokedMethodListener, ITestListener, ISuiteListener {
 	

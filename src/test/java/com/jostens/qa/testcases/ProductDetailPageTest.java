@@ -6,8 +6,8 @@ import org.testng.asserts.SoftAssert;
 
 import com.jostens.qa.base.TestBase;
 import com.jostens.qa.pages.ProductDetailPage;
+import com.jostens.qa.util.ExcelUtil;
 import com.jostens.qa.util.ExtentFactory;
-import com.jostens.qa.util.TestUtil;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class ProductDetailPageTest extends TestBase {
@@ -24,8 +24,8 @@ public class ProductDetailPageTest extends TestBase {
 	@BeforeClass
 	public void beforeClass() {
 		//Initialize Variable(s)
-		genMethods = new TestUtil();
-		genMethods.setSheetName("Product Search");
+		excelMethods = new ExcelUtil();
+		excelMethods.setSheetName("Product Search");
 		column = 11;
 		
 		//Setup the Report
@@ -40,7 +40,7 @@ public class ProductDetailPageTest extends TestBase {
 	}
 	
 	//Test the product search functionality
-	@Test(dataProvider="inputs", dataProviderClass=TestUtil.class)
+	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
 	public void cproductSearchTest(String product, String productPageTitle, String productColor, String productSize, String logoNumber, String logoPosition, String logoLeftValue, String logoTopValue, String logoWidthValue, String logoHeightValue, String finalResult, String dataRow) throws InterruptedException {
 		System.out.println("@Test - ProductDetailPageTest()");
 		

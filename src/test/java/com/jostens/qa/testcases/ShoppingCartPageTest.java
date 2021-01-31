@@ -6,8 +6,8 @@ import org.testng.asserts.SoftAssert;
 
 import com.jostens.qa.base.TestBase;
 import com.jostens.qa.pages.ShoppingCartPage;
+import com.jostens.qa.util.ExcelUtil;
 import com.jostens.qa.util.ExtentFactory;
-import com.jostens.qa.util.TestUtil;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class ShoppingCartPageTest extends TestBase {
@@ -23,8 +23,8 @@ public class ShoppingCartPageTest extends TestBase {
 	@BeforeClass
 	public void beforeClass() {
 		//Initialize Variable(s)
-		genMethods = new TestUtil();
-		genMethods.setSheetName("Shopping Cart");
+		excelMethods = new ExcelUtil();
+		excelMethods.setSheetName("Shopping Cart");
 		column = 7;
 		
 		//Setup the Report
@@ -38,7 +38,7 @@ public class ShoppingCartPageTest extends TestBase {
 		shoppingCartPage = new ShoppingCartPage(eDriver, reportLogger);
 	}
 	
-	@Test(dataProvider="inputs", dataProviderClass=TestUtil.class)
+	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
 	public void daddProductToCartTest(String productName, String shoppingCartTitle, String pricePerItem, String itemCount, String itemPriceTotal, String itemSubtotal, String finalResult, String dataRow) throws InterruptedException {
 		System.out.println("@Test - ShoppingCartPageTest()");
 		System.out.println(shoppingCartTitle);

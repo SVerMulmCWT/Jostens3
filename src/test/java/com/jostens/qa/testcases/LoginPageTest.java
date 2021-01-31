@@ -6,8 +6,8 @@ import org.testng.asserts.SoftAssert;
 
 import com.jostens.qa.base.TestBase;
 import com.jostens.qa.pages.LoginPage;
+import com.jostens.qa.util.ExcelUtil;
 import com.jostens.qa.util.ExtentFactory;
-import com.jostens.qa.util.TestUtil;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class LoginPageTest extends TestBase {
@@ -24,8 +24,8 @@ public class LoginPageTest extends TestBase {
 	@BeforeClass
 	public void beforeClass() {
 		//Initialize Variable(s)
-		genMethods = new TestUtil();
-		genMethods.setSheetName("Login");
+		excelMethods = new ExcelUtil();
+		excelMethods.setSheetName("Login");
 		column = 7;
 		
 		//Setup the Report

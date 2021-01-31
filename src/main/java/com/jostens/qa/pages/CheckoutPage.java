@@ -32,6 +32,167 @@ public class CheckoutPage extends CheckoutPageLocators {
 		genMethods = new TestUtil();
 	}
 	
+	public String stateAbbreviation(String state) {
+		//Initialize Variable(s)
+		String stateAbb = "";
+		state = state.toLowerCase();
+		
+		switch(state) {
+			case "alabama":
+				stateAbb = "AL";
+				break;
+			case "alaska":
+				stateAbb = "AK";
+				break;
+			case "arizona":
+				stateAbb = "AZ";
+				break;
+			case "arkansas":
+				stateAbb = "AR";
+				break;
+			case "california":
+				stateAbb = "CA";
+				break;
+			case "colorado":
+				stateAbb = "CO";
+				break;
+			case "connecticut":
+				stateAbb = "CT";
+				break;
+			case "delaware":
+				stateAbb = "DE";
+				break;
+			case "florida":
+				stateAbb = "FL";
+				break;
+			case "georgia":
+				stateAbb = "GA";
+				break;
+			case "hawaii":
+				stateAbb = "HI";
+				break;
+			case "idaho":
+				stateAbb = "ID";
+				break;
+			case "illinois":
+				stateAbb = "IL";
+				break;
+			case "indiana":
+				stateAbb = "IN";
+				break;
+			case "iowa":
+				stateAbb = "IA";
+				break;
+			case "kansas":
+				stateAbb = "KS";
+				break;
+			case "kentucky":
+				stateAbb = "KY";
+				break;
+			case "louisiana":
+				stateAbb = "LA";
+				break;
+			case "maine":
+				stateAbb = "ME";
+				break;
+			case "maryland":
+				stateAbb = "MD";
+				break;
+			case "massachusetts":
+				stateAbb = "MA";
+				break;
+			case "michigan":
+				stateAbb = "MI";
+				break;
+			case "minnesota":
+				stateAbb = "MN";
+				break;
+			case "mississippi":
+				stateAbb = "MS";
+				break;
+			case "missouri":
+				stateAbb = "MO";
+				break;
+			case "montana":
+				stateAbb = "MT";
+				break;
+			case "nebraska":
+				stateAbb = "NE";
+				break;
+			case "nevada":
+				stateAbb = "NV";
+				break;
+			case "new hampshire":
+				stateAbb = "NH";
+				break;
+			case "new jersey":
+				stateAbb = "NJ";
+				break;
+			case "new mexico":
+				stateAbb = "NM";
+				break;
+			case "new york":
+				stateAbb = "NY";
+				break;
+			case "north carolina":
+				stateAbb = "NC";
+				break;
+			case "north dakota":
+				stateAbb = "ND";
+				break;
+			case "ohio":
+				stateAbb = "OH";
+				break;
+			case "oklahoma":
+				stateAbb = "OK";
+				break;
+			case "oregon":
+				stateAbb = "OR";
+				break;
+			case "pennsylvania":
+				stateAbb = "PA";
+				break;
+			case "rhode island":
+				stateAbb = "RI";
+				break;
+			case "south carolina":
+				stateAbb = "SC";
+				break;
+			case "south dakota":
+				stateAbb = "SD";
+				break;
+			case "tennessee":
+				stateAbb = "TN";
+				break;
+			case "texas":
+				stateAbb = "TX";
+				break;
+			case "utah":
+				stateAbb = "UT";
+				break;
+			case "vermont":
+				stateAbb = "VT";
+				break;
+			case "virginia":
+				stateAbb = "VA";
+				break;
+			case "washington":
+				stateAbb = "WA";
+				break;
+			case "west virginia":
+				stateAbb = "WV";
+				break;
+			case "wisconsin":
+				stateAbb = "WI";
+				break;
+			case "wyoming":
+				stateAbb = "WY";
+				break;
+		}
+		
+		return stateAbb;
+	}
+	
 	public void proceedToCheckout () {
 		//Output a message to the report & system
 		System.out.println("Proceeding to the Checkout Page");
@@ -199,7 +360,7 @@ public class CheckoutPage extends CheckoutPageLocators {
 	
 	public SoftAssert verifyShippingInfo(SoftAssert softAssert, String email, String address, String city, String state, String zipCode, String country) {
 		//Initialize Variable(s)
-		String fullAddress = address + ", " + city + " " + genMethods.stateAbbreviation(state) + " " + zipCode + ", " + country;
+		String fullAddress = address + ", " + city + " " + stateAbbreviation(state) + " " + zipCode + ", " + country;
 		
 		softAssert.assertEquals(fullAddress, addressConfirmationField.getText());
 		softAssert.assertEquals(email, emailConfirmationField.getText());

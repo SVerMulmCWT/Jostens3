@@ -6,8 +6,8 @@ import org.testng.asserts.SoftAssert;
 
 import com.jostens.qa.base.TestBase;
 import com.jostens.qa.pages.SearchSchoolPage;
+import com.jostens.qa.util.ExcelUtil;
 import com.jostens.qa.util.ExtentFactory;
-import com.jostens.qa.util.TestUtil;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class SearchSchoolPageTest extends TestBase {
@@ -24,8 +24,8 @@ public class SearchSchoolPageTest extends TestBase {
 	@BeforeClass
 	public void beforeClass() {
 		//Initialize Variable(s)
-		genMethods = new TestUtil();
-		genMethods.setSheetName("School Search");
+		excelMethods = new ExcelUtil();
+		excelMethods.setSheetName("School Search");
 		column = 3;
 		
 		//Setup the Report
@@ -40,7 +40,7 @@ public class SearchSchoolPageTest extends TestBase {
 	}
 	
 	//Test the school search functionality
-	@Test(dataProvider="inputs", dataProviderClass=TestUtil.class)
+	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
 	public void bsearchSchoolTest(String schoolName, String schoolStoreTitle, String finalStatus, String dataRow) {
 		System.out.println("@Test - SearchSchoolPageTest()");
 		

@@ -6,8 +6,8 @@ import org.testng.asserts.SoftAssert;
 
 import com.jostens.qa.base.TestBase;
 import com.jostens.qa.pages.PaymentPage;
+import com.jostens.qa.util.ExcelUtil;
 import com.jostens.qa.util.ExtentFactory;
-import com.jostens.qa.util.TestUtil;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class PaymentPageTest extends TestBase {
@@ -23,8 +23,8 @@ public class PaymentPageTest extends TestBase {
 	@BeforeClass
 	public void beforeClass() {
 		//Initialize Variable(s)
-		genMethods = new TestUtil();
-		genMethods.setSheetName("Payment");
+		excelMethods = new ExcelUtil();
+		excelMethods.setSheetName("Payment");
 		column = 6;
 		
 		//Setup the Report
@@ -38,7 +38,7 @@ public class PaymentPageTest extends TestBase {
 		paymentPage = new PaymentPage(eDriver, reportLogger);
 	}
 	
-	@Test(dataProvider="inputs", dataProviderClass=TestUtil.class)
+	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
 	public void gtest(String creditCardNumber, String cardHolderName, String expiryDate, String securityCode, String expectedErrorMessage, String finalStatus, String dataRow) throws InterruptedException {
 		System.out.println("@Test - PaymentPageTest()");
 		

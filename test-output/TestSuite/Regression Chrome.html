@@ -1,0 +1,159 @@
+<html>
+<head>
+<title>TestNG:  Regression Chrome</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Regression Chrome</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>16/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Jan 31 13:47:49 CST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>160 seconds (160777 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.jostens.qa.testcases.LoginPageTest.aloginTest()'><b>aloginTest</b><br>Test class: com.jostens.qa.testcases.LoginPageTest</td>
+<td></td>
+<td>8</td>
+<td>com.jostens.qa.testcases.LoginPageTest@bd4dc25</td></tr>
+<tr>
+<td title='com.jostens.qa.testcases.SearchSchoolPageTest.bsearchSchoolTest()'><b>bsearchSchoolTest</b><br>Test class: com.jostens.qa.testcases.SearchSchoolPageTest<br>Parameters: Chaska Middle School East, Chaska Middle School East Chaska, MN Products - Graduation Products from Jostens, Success - 2021/01/31 13:35:20, 1</td>
+<td></td>
+<td>3</td>
+<td>com.jostens.qa.testcases.SearchSchoolPageTest@25084a1e</td></tr>
+<tr>
+<td title='com.jostens.qa.testcases.SearchSchoolPageTest.bsearchSchoolTest()'><b>bsearchSchoolTest</b><br>Test class: com.jostens.qa.testcases.SearchSchoolPageTest<br>Parameters: Chaska High School, Chaska High School Chaska, MN Products - Graduation Products from Jostens, Success - 2021/01/31 13:35:28, 2</td>
+<td></td>
+<td>3</td>
+<td>com.jostens.qa.testcases.SearchSchoolPageTest@25084a1e</td></tr>
+<tr>
+<td title='com.jostens.qa.testcases.ProductDetailPageTest.cproductSearchTest()'><b>cproductSearchTest</b><br>Test class: com.jostens.qa.testcases.ProductDetailPageTest<br>Parameters: New Era Men's Heritage Blend 3/4-Sleeve Baseball Raglan Tee, New Era Men's Heritage Blend 3/4-Sleeve Baseball Raglan Tee - Jostens School Store, Black/White, XL, 1, Right Chest, 31, 35, 11, 7.7, Success - 2020/12/23 13:32:56, 1</td>
+<td></td>
+<td>27</td>
+<td>com.jostens.qa.testcases.ProductDetailPageTest@156b88f5</td></tr>
+<tr>
+<td title='com.jostens.qa.testcases.ProductDetailPageTest.cproductSearchTest()'><b>cproductSearchTest</b><br>Test class: com.jostens.qa.testcases.ProductDetailPageTest<br>Parameters: Next Level Unisex Triblend Long Sleeve Pullover Hoodie, Next Level Unisex Triblend Long Sleeve Pullover Hoodie - Jostens School Store, White, M, 2, Center Chest, 35, 20, 30, 21, Success - 2020/12/23 13:33:18, 2</td>
+<td></td>
+<td>23</td>
+<td>com.jostens.qa.testcases.ProductDetailPageTest@156b88f5</td></tr>
+<tr>
+<td title='com.jostens.qa.testcases.ProductDetailPageTest.cproductSearchTest()'><b>cproductSearchTest</b><br>Test class: com.jostens.qa.testcases.ProductDetailPageTest<br>Parameters: 3 Ply Sublimated Mask, 3 Ply Sublimated Mask - Jostens School Store, White, L/XL, 6, Mask Center, 35, 37, 30, 21, Success - 2020/12/23 13:33:43, 3</td>
+<td></td>
+<td>22</td>
+<td>com.jostens.qa.testcases.ProductDetailPageTest@156b88f5</td></tr>
+<tr>
+<td title='com.jostens.qa.testcases.ShoppingCartPageTest.daddProductToCartTest()'><b>daddProductToCartTest</b><br>Test class: com.jostens.qa.testcases.ShoppingCartPageTest<br>Parameters: New Era Men's Heritage Blend 3/4-Sleeve Baseball Raglan Tee, Your Shopping Cart - Jostens School Store, $24.95, 1, $24.95, $77.85, Success - 2021/01/31 13:36:51, 1</td>
+<td></td>
+<td>1</td>
+<td>com.jostens.qa.testcases.ShoppingCartPageTest@3bf9ce3e</td></tr>
+<tr>
+<td title='com.jostens.qa.testcases.ShoppingCartPageTest.daddProductToCartTest()'><b>daddProductToCartTest</b><br>Test class: com.jostens.qa.testcases.ShoppingCartPageTest<br>Parameters: Next Level Unisex Triblend Long Sleeve Pullover Hoodie, Your Shopping Cart - Jostens School Store, $33.95, 1, $33.95, $77.85, Success - 2021/01/31 13:36:51, 2</td>
+<td></td>
+<td>0</td>
+<td>com.jostens.qa.testcases.ShoppingCartPageTest@3bf9ce3e</td></tr>
+<tr>
+<td title='com.jostens.qa.testcases.ShoppingCartPageTest.daddProductToCartTest()'><b>daddProductToCartTest</b><br>Test class: com.jostens.qa.testcases.ShoppingCartPageTest<br>Parameters: 3 Ply Sublimated Mask, Your Shopping Cart - Jostens School Store, $18.95, 1, $18.95, $77.85, Success - 2021/01/31 13:36:51, 3</td>
+<td></td>
+<td>0</td>
+<td>com.jostens.qa.testcases.ShoppingCartPageTest@3bf9ce3e</td></tr>
+<tr>
+<td title='com.jostens.qa.testcases.CheckoutPageTest.eproceedWithCheckoutTest()'><b>eproceedWithCheckoutTest</b><br>Test class: com.jostens.qa.testcases.CheckoutPageTest<br>Parameters: New Era Men's Heritage Blend 3/4-Sleeve Baseball Raglan Tee, 1, $24.95, Information - Jostens School Store - Checkout, Steve.VerMulm@gmail.com, No, Steven, VerMulm, 409 5th Ave. South, Hopkins, United States, Minnesota, 55343, 7123635520, No, Success - 2021/01/31 13:37:05, 1</td>
+<td></td>
+<td>10</td>
+<td>com.jostens.qa.testcases.CheckoutPageTest@16610890</td></tr>
+<tr>
+<td title='com.jostens.qa.testcases.CheckoutPageTest.eproceedWithCheckoutTest()'><b>eproceedWithCheckoutTest</b><br>Test class: com.jostens.qa.testcases.CheckoutPageTest<br>Parameters: Next Level Unisex Triblend Long Sleeve Pullover Hoodie, 1, $33.95, Information - Jostens School Store - Checkout, Steve.VerMulm@gmail.com, No, Ashlyn, Ambrose, 409 Beachcomber Drive, Lake Park, United States, Iowa, 51347, 7123632575, No, Success - 2021/01/31 13:37:16, 2</td>
+<td></td>
+<td>11</td>
+<td>com.jostens.qa.testcases.CheckoutPageTest@16610890</td></tr>
+<tr>
+<td title='com.jostens.qa.testcases.CheckoutPageTest.eproceedWithCheckoutTest()'><b>eproceedWithCheckoutTest</b><br>Test class: com.jostens.qa.testcases.CheckoutPageTest<br>Parameters: 3 Ply Sublimated Mask, 1, $18.95, Information - Jostens School Store - Checkout, Steve.VerMulm@gmail.com, No, Cynthia, Ambrosia, 62310 Lake View Road, Madison Lake, United States, Minnesota, 56063, 7123635519, No, Success - 2021/01/31 13:37:28, 3</td>
+<td></td>
+<td>7</td>
+<td>com.jostens.qa.testcases.CheckoutPageTest@16610890</td></tr>
+<tr>
+<td title='com.jostens.qa.testcases.CheckoutPageTest.ftest2()'><b>ftest2</b><br>Test class: com.jostens.qa.testcases.CheckoutPageTest<br>Parameters: New Era Men's Heritage Blend 3/4-Sleeve Baseball Raglan Tee, 1, $24.95, Information - Jostens School Store - Checkout, Steve.VerMulm@gmail.com, No, Steven, VerMulm, 409 5th Ave. South, Hopkins, United States, Minnesota, 55343, 7123635520, No, Success - 2021/01/31 13:49:54, 1</td>
+<td></td>
+<td>0</td>
+<td>com.jostens.qa.testcases.CheckoutPageTest@16610890</td></tr>
+<tr>
+<td title='com.jostens.qa.testcases.CheckoutPageTest.ftest2()'><b>ftest2</b><br>Test class: com.jostens.qa.testcases.CheckoutPageTest<br>Parameters: Next Level Unisex Triblend Long Sleeve Pullover Hoodie, 1, $33.95, Information - Jostens School Store - Checkout, Steve.VerMulm@gmail.com, No, Ashlyn, Ambrose, 409 Beachcomber Drive, Lake Park, United States, Iowa, 51347, 7123632575, No, Success - 2021/01/31 13:50:05, 2</td>
+<td></td>
+<td>0</td>
+<td>com.jostens.qa.testcases.CheckoutPageTest@16610890</td></tr>
+<tr>
+<td title='com.jostens.qa.testcases.CheckoutPageTest.ftest2()'><b>ftest2</b><br>Test class: com.jostens.qa.testcases.CheckoutPageTest<br>Parameters: 3 Ply Sublimated Mask, 1, $18.95, Information - Jostens School Store - Checkout, Steve.VerMulm@gmail.com, No, Cynthia, Ambrosia, 62310 Lake View Road, Madison Lake, United States, Minnesota, 56063, 7123635519, No, Success - 2021/01/31 13:50:13, 3</td>
+<td></td>
+<td>0</td>
+<td>com.jostens.qa.testcases.CheckoutPageTest@16610890</td></tr>
+<tr>
+<td title='com.jostens.qa.testcases.PaymentPageTest.gtest()'><b>gtest</b><br>Test class: com.jostens.qa.testcases.PaymentPageTest<br>Parameters: 5555555555554444, Cynthia Ambrosia, 0924, 096, Invalid CC Number, Success - 2021/01/31 13:37:47, 1</td>
+<td></td>
+<td>15</td>
+<td>com.jostens.qa.testcases.PaymentPageTest@71def8f8</td></tr>
+</table><p>
+</body>
+</html>

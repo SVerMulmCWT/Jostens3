@@ -3,6 +3,8 @@ package com.jostens.qa.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -12,6 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -60,7 +63,6 @@ public class TestBase {
 	public ExtentReports report; //used to setup a report that will hold the testing info of the script(s)
 	public ExtentTest reportLogger; //used to store testing details in the report
 	
-	
 	//Define PageFactories
 	public LoginPage loginPage;
 	public SearchSchoolPage searchSchoolPage;
@@ -82,11 +84,18 @@ public class TestBase {
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static void initializeDriver(String browser) {
-		String testingBrowser = browser;
+	public static void initializeDriver(String browserName, String browser_version, String os, String os_version, String browserStack) {
+		String testingBrowser = browserName;
+		
+		//Set BrowserStack browser details to 'caps'
+//		String methodName = name.getName();
+		caps.setCapability("os", os);
+		caps.setCapability("os_version", os_version);
+		caps.setCapability("browser_version", browser_version);
+//		caps.setCapability("name", methodName);
 		
 		//Initialize the relevant browser driver
-		if (testingBrowser.equalsIgnoreCase("internetexplorer")) {
+		if (testingBrowser.equalsIgnoreCase("internetexplorer") || testingBrowser.equalsIgnoreCase("edge")) {
 			//Setup caps properties for IE, if IE is going to be used as the Driver
 			caps.setCapability(InternetExplorerDriver.NATIVE_EVENTS, false);
 			caps.setCapability(InternetExplorerDriver.ENABLE_PERSISTENT_HOVERING, false);
@@ -96,24 +105,53 @@ public class TestBase {
 			caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 			
 			WebDriverManager.iedriver().setup();
-			driver = new InternetExplorerDriver(caps);
+			
+			if (browserStack.equalsIgnoreCase("y")) {
+				caps.setCapability("browser", "Edge");
+			} else {
+				driver = new InternetExplorerDriver(caps);
+			}
+			
 		} else if (testingBrowser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+			
+			if (browserStack.equalsIgnoreCase("y")) {
+				caps.setCapability("browser", "Firefox");
+			} else {
+				driver = new FirefoxDriver();
+			}
+			
 		} else if (testingBrowser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			
+			if (browserStack.equalsIgnoreCase("y")) {
+				caps.setCapability("browser", "Chrome");
+			} else {
+				driver = new ChromeDriver();
+			}
+			
 		} else {
 			System.out.println("Cannot setup the driver due to invalid input");
 			driver.quit();
 		}
 		
+		//Open the browser
+		if (browserStack.equalsIgnoreCase("y")) {
+			try {
+				System.out.println("1");
+				driver = new RemoteWebDriver(new URL(URL), caps);
+				System.out.println("2");
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			}
+		}
+		
 		//Setup the Event Driver
 		eDriver = new EventFiringWebDriver(driver);
-//		eHandler = new EventHandler();
-		webEventListener = new WebEventListener();
-//		eDriver.register(eHandler);
-		eDriver.register(webEventListener);
+		eHandler = new EventHandler();
+//		webEventListener = new WebEventListener();
+		eDriver.register(eHandler);
+//		eDriver.register(webEventListener);
 		
 		eDriver.manage().window().maximize();
 		eDriver.manage().deleteAllCookies();
@@ -123,11 +161,11 @@ public class TestBase {
 	
 //	@BeforeSuite
 	@BeforeTest
-	@Parameters({"browser"})
-	public void beforeSuite(String browser) {
+	@Parameters({ "browser", "browser_version", "os", "os_version", "browserStack" })
+	public void beforeSuite(String browserName, String browser_version, String os, String os_version, String browserStack) {
 		//Initialize Variable(s)
 		System.out.println("Performing the script's setups (@BeforeSuite)");
-		initializeDriver(browser); //Sets up WebDriver with Listeners
+		initializeDriver(browserName, browser_version, os, os_version, browserStack); //Sets up WebDriver with Listeners
 		genMethods = new TestUtil();
 	}
 	

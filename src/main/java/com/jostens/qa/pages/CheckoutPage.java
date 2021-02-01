@@ -335,23 +335,19 @@ public class CheckoutPage extends CheckoutPageLocators {
 		
 		//Iterate through the lists to locate if the expected information is found - return true, if all info found, otherwise, return false
 		for (int i = 0; i < productNameList.size(); i++) {
-			System.out.println(productNameList.get(i).getText() + " - " + productQuantityList.get(i).getText() + " - " + productPriceList.get(i).getText());
 			if (productName.equals(productNameList.get(i).getText()) && productQuantity.equals(productQuantityList.get(i).getText()) && productPrice.equals(productPriceList.get(i).getText())) {
 				productFound = true;
 				
 				softAssert.assertEquals(productNameList.get(i).getText(), productName);
 				softAssert.assertEquals(productQuantityList.get(i).getText(), productQuantity);
 				softAssert.assertEquals(productPriceList.get(i).getText(), productPrice);
-				
 			}
 		}
 		
 		if (!productFound) {
-			
 			softAssert.assertEquals(productNameList.get(0).getText(), productName);
 			softAssert.assertEquals(productQuantityList.get(0).getText(), productQuantity);
 			softAssert.assertEquals(productPriceList.get(0).getText(), productPrice);
-			
 		}
 		
 		//Return the status for the SoftAssert

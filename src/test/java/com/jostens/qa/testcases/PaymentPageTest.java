@@ -1,5 +1,6 @@
 package com.jostens.qa.testcases;
 
+import org.testng.SkipException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -39,8 +40,12 @@ public class PaymentPageTest extends TestBase {
 	}
 	
 	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
-	public void gtest(String creditCardNumber, String cardHolderName, String expiryDate, String securityCode, String expectedErrorMessage, String finalStatus, String dataRow) throws InterruptedException {
+	public void paymentPageTest(String creditCardNumber, String cardHolderName, String expiryDate, String securityCode, String expectedErrorMessage, String finalStatus, String dataRow) throws InterruptedException {
 		System.out.println("@Test - PaymentPageTest()");
+		
+		if (creditCardNumber.equals("") || creditCardNumber == null) {
+			throw new SkipException("Skipping '@Test=gtest' due to a lack of data");
+		}
 		
 		//Initialize Variable(s)
 		checkpoint = new SoftAssert(); //SoftAssert Setup (for identifying checkpoints)

@@ -16,6 +16,7 @@
 		<parameter name="browser" value="Chrome" />
 		<parameter name="browser_version" value="81" />
 		<parameter name="browserStack" value="n" />
+<!-- 		<parameter name="dataTable" value="" /> -->
 		
 <!-- 		<parameter name="browser" value="chrome"></parameter> -->
 		

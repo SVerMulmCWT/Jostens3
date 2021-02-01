@@ -39,7 +39,7 @@ public class CheckoutPageTest extends TestBase {
 	}
 	
 	@Test(priority=1, dataProvider="inputs", dataProviderClass=ExcelUtil.class)
-	public void proceedWithCheckoutTest(String product, String productQuantity, String productPrice, String checkoutPageTitle, String email, String enableEmails, String firstName, String lastName, String address, String city, String country, String state, String zipCode, String phoneNumber, String saveInfo, String finalResult, String dataRow) throws InterruptedException {
+	public void proceedWithCheckoutTest(String product, String productQuantity, String productPrice, String checkoutPageTitle, String email, String enableEmails, String firstName, String lastName, String address, String city, String country, String state, String zipCode, String phoneNumber, String saveInfo, String finalResult, String notes, String dataRow) throws InterruptedException {
 		System.out.println("@Test - proceedWithCheckoutTest()");
 		
 		//Initialize Variable(s)
@@ -78,7 +78,7 @@ public class CheckoutPageTest extends TestBase {
 	}
 	
 	@Test(priority=2, dataProvider="inputs", dataProviderClass=ExcelUtil.class)
-	public void checkoutListVerification(String product, String productQuantity, String productPrice, String checkoutPageTitle, String email, String enableEmails, String firstName, String lastName, String address, String city, String country, String state, String zipCode, String phoneNumber, String saveInfo, String finalResult, String dataRow) {
+	public void checkoutListVerification(String product, String productQuantity, String productPrice, String checkoutPageTitle, String email, String enableEmails, String firstName, String lastName, String address, String city, String country, String state, String zipCode, String phoneNumber, String saveInfo, String finalResult, String notes, String dataRow) {
 		System.out.println("@Test - checkoutListVerification()");
 		
 		//Verify that the checkout products matches expectations

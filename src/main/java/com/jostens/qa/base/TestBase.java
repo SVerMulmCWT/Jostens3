@@ -171,7 +171,7 @@ public class TestBase {
 	
 	@AfterSuite
 	public void afterSuite() {
-//		eDriver.quit();
+		eDriver.quit();
 	}
 	
 	@AfterMethod

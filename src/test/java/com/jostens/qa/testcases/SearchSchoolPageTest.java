@@ -1,6 +1,7 @@
 package com.jostens.qa.testcases;
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -22,15 +23,17 @@ public class SearchSchoolPageTest extends TestBase {
 	
 	//Setup variable(s) and other info for the class
 	@BeforeClass
-	public void beforeClass() {
+	@Parameters({"dataTable"})
+	public void beforeClass(String excelPath) {
 		//Initialize Variable(s)
 		excelMethods = new ExcelUtil();
+		excelMethods.setDataTablePath(excelPath);
 		excelMethods.setSheetName("School Search");
 		column = 3;
 		
 		//Setup the Report
 		report = ExtentFactory.getInstance();
-		reportLogger = report.startTest("HomePageTest Script");
+		reportLogger = report.startTest("SearchSchoolPageTest Script");
 		
 		//Initialize PageFactories
 		System.out.println("Initializing the script's PageFactories");

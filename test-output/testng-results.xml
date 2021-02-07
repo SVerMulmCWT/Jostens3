@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="10" total="26" passed="14" failed="1" skipped="1">
+<testng-results ignored="10" total="26" passed="13" failed="2" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-31T21:19:35 CST" name="TestSuite" finished-at="2021-01-31T21:21:57 CST" duration-ms="142124">
+  <suite started-at="2021-02-07T14:11:55 CST" name="TestSuite" finished-at="2021-02-07T14:14:10 CST" duration-ms="134221">
     <groups>
     </groups>
-    <test started-at="2021-01-31T21:19:35 CST" name="Regression Chrome" finished-at="2021-01-31T21:21:57 CST" duration-ms="142124">
+    <test started-at="2021-02-07T14:11:55 CST" name="Regression Chrome" finished-at="2021-02-07T14:14:10 CST" duration-ms="134221">
       <class name="com.jostens.qa.testcases.CheckoutPageTest">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-01-31T21:21:30 CST" name="beforeClass" finished-at="2021-01-31T21:21:30 CST" duration-ms="110" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-02-07T14:13:44 CST" name="beforeClass" finished-at="2021-02-07T14:13:44 CST" duration-ms="38" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[\src\main\java\com\jostens\qa\testdata\Jostens2.xlsx]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="proceedWithCheckoutTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-01-31T21:21:30 CST" name="proceedWithCheckoutTest" data-provider="inputs" finished-at="2021-01-31T21:21:40 CST" duration-ms="10043" status="FAIL">
+        <test-method signature="proceedWithCheckoutTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-02-07T14:13:44 CST" name="proceedWithCheckoutTest" data-provider="inputs" finished-at="2021-02-07T14:13:53 CST" duration-ms="9360" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -90,7 +97,7 @@
             </param>
             <param index="15">
               <value>
-                <![CDATA[Failure - 2021/01/31 19:35:51]]>
+                <![CDATA[Failure - 2021/02/06 21:46:05]]>
               </value>
             </param>
             <param index="16">
@@ -114,7 +121,7 @@ expected [Information - Jostens School Store] but found [Information - Jostens S
 expected [Information - Jostens School Store] but found [Information - Jostens School Store - Checkout]
 at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
 at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-at com.jostens.qa.testcases.CheckoutPageTest.proceedWithCheckoutTest(CheckoutPageTest.java:74)
+at com.jostens.qa.testcases.CheckoutPageTest.proceedWithCheckoutTest(CheckoutPageTest.java:77)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -149,7 +156,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- proceedWithCheckoutTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-01-31T21:21:40 CST" name="afterMethod" finished-at="2021-01-31T21:21:41 CST" duration-ms="525" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-02-07T14:13:53 CST" name="afterMethod" finished-at="2021-02-07T14:13:54 CST" duration-ms="491" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -160,7 +167,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="proceedWithCheckoutTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-01-31T21:21:41 CST" name="proceedWithCheckoutTest" data-provider="inputs" finished-at="2021-01-31T21:21:48 CST" duration-ms="7488" status="PASS">
+        <test-method signature="proceedWithCheckoutTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-02-07T14:13:54 CST" name="proceedWithCheckoutTest" data-provider="inputs" finished-at="2021-02-07T14:14:01 CST" duration-ms="7408" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -239,7 +246,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="15">
               <value>
-                <![CDATA[Success - 2021/01/31 19:36:02]]>
+                <![CDATA[Success - 2021/02/06 21:46:14]]>
               </value>
             </param>
             <param index="16">
@@ -254,7 +261,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- proceedWithCheckoutTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-01-31T21:21:48 CST" name="afterMethod" finished-at="2021-01-31T21:21:48 CST" duration-ms="104" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-02-07T14:14:01 CST" name="afterMethod" finished-at="2021-02-07T14:14:01 CST" duration-ms="88" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -265,7 +272,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="proceedWithCheckoutTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-01-31T21:21:48 CST" name="proceedWithCheckoutTest" data-provider="inputs" finished-at="2021-01-31T21:21:56 CST" duration-ms="7682" status="PASS">
+        <test-method signature="proceedWithCheckoutTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-02-07T14:14:01 CST" name="proceedWithCheckoutTest" data-provider="inputs" finished-at="2021-02-07T14:14:09 CST" duration-ms="7482" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -344,7 +351,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="15">
               <value>
-                <![CDATA[Success - 2021/01/31 19:36:11]]>
+                <![CDATA[Success - 2021/02/06 21:46:22]]>
               </value>
             </param>
             <param index="16">
@@ -359,7 +366,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- proceedWithCheckoutTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-01-31T21:21:56 CST" name="afterMethod" finished-at="2021-01-31T21:21:56 CST" duration-ms="114" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-02-07T14:14:09 CST" name="afterMethod" finished-at="2021-02-07T14:14:09 CST" duration-ms="93" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -370,7 +377,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="checkoutListVerification(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-01-31T21:21:56 CST" name="checkoutListVerification" data-provider="inputs" finished-at="2021-01-31T21:21:56 CST" duration-ms="134" status="PASS">
+        <test-method signature="checkoutListVerification(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-02-07T14:14:09 CST" name="checkoutListVerification" data-provider="inputs" finished-at="2021-02-07T14:14:09 CST" duration-ms="150" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -449,7 +456,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="15">
               <value>
-                <![CDATA[Failure - 2021/01/31 21:21:40]]>
+                <![CDATA[Failure - 2021/02/07 14:13:53]]>
               </value>
             </param>
             <param index="16">
@@ -466,7 +473,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkoutListVerification -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-01-31T21:21:56 CST" name="afterMethod" finished-at="2021-01-31T21:21:56 CST" duration-ms="88" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-02-07T14:14:09 CST" name="afterMethod" finished-at="2021-02-07T14:14:09 CST" duration-ms="95" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -477,7 +484,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="checkoutListVerification(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-01-31T21:21:56 CST" name="checkoutListVerification" data-provider="inputs" finished-at="2021-01-31T21:21:56 CST" duration-ms="105" status="PASS">
+        <test-method signature="checkoutListVerification(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-02-07T14:14:09 CST" name="checkoutListVerification" data-provider="inputs" finished-at="2021-02-07T14:14:09 CST" duration-ms="118" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -556,7 +563,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="15">
               <value>
-                <![CDATA[Success - 2021/01/31 21:21:48]]>
+                <![CDATA[Success - 2021/02/07 14:14:01]]>
               </value>
             </param>
             <param index="16">
@@ -571,7 +578,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkoutListVerification -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-01-31T21:21:56 CST" name="afterMethod" finished-at="2021-01-31T21:21:56 CST" duration-ms="86" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-02-07T14:14:09 CST" name="afterMethod" finished-at="2021-02-07T14:14:09 CST" duration-ms="75" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -582,7 +589,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="checkoutListVerification(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-01-31T21:21:56 CST" name="checkoutListVerification" data-provider="inputs" finished-at="2021-01-31T21:21:56 CST" duration-ms="111" status="PASS">
+        <test-method signature="checkoutListVerification(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-02-07T14:14:09 CST" name="checkoutListVerification" data-provider="inputs" finished-at="2021-02-07T14:14:10 CST" duration-ms="99" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -661,7 +668,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="15">
               <value>
-                <![CDATA[Success - 2021/01/31 21:21:56]]>
+                <![CDATA[Success - 2021/02/07 14:14:09]]>
               </value>
             </param>
             <param index="16">
@@ -676,7 +683,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkoutListVerification -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-01-31T21:21:56 CST" name="afterMethod" finished-at="2021-01-31T21:21:57 CST" duration-ms="75" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.CheckoutPageTest@4d465b11]" started-at="2021-02-07T14:14:10 CST" name="afterMethod" finished-at="2021-02-07T14:14:10 CST" duration-ms="78" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -689,7 +696,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
         </test-method> <!-- afterMethod -->
       </class> <!-- com.jostens.qa.testcases.CheckoutPageTest -->
       <class name="com.jostens.qa.testcases.LoginPageTest">
-        <test-method is-config="true" signature="beforeSuite(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.LoginPageTest@3bf9ce3e]" started-at="2021-01-31T21:19:35 CST" name="beforeSuite" finished-at="2021-01-31T21:19:40 CST" duration-ms="4910" status="PASS">
+        <test-method is-config="true" signature="beforeSuite(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.LoginPageTest@3bf9ce3e]" started-at="2021-02-07T14:11:55 CST" name="beforeSuite" finished-at="2021-02-07T14:11:59 CST" duration-ms="3161" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -720,36 +727,92 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.jostens.qa.testcases.LoginPageTest@3bf9ce3e]" started-at="2021-01-31T21:19:40 CST" name="beforeClass" finished-at="2021-01-31T21:19:40 CST" duration-ms="754" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="loginTest()[pri:0, instance:com.jostens.qa.testcases.LoginPageTest@3bf9ce3e]" started-at="2021-01-31T21:19:40 CST" name="loginTest" finished-at="2021-01-31T21:19:47 CST" duration-ms="6428" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.LoginPageTest@3bf9ce3e]" started-at="2021-01-31T21:19:47 CST" name="afterMethod" finished-at="2021-01-31T21:19:48 CST" duration-ms="1295" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.jostens.qa.testcases.LoginPageTest@3bf9ce3e]" started-at="2021-02-07T14:11:59 CST" name="beforeClass" finished-at="2021-02-07T14:11:59 CST" duration-ms="182" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginTest status=SUCCESS method=LoginPageTest.loginTest()[pri:0, instance:com.jostens.qa.testcases.LoginPageTest@3bf9ce3e] output={null}]]]>
+                <![CDATA[\src\main\java\com\jostens\qa\testdata\Jostens2.xlsx]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="loginTest()[pri:0, instance:com.jostens.qa.testcases.LoginPageTest@3bf9ce3e]" started-at="2021-02-07T14:11:59 CST" name="loginTest" finished-at="2021-02-07T14:12:05 CST" duration-ms="6632" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [Steven VerMulm] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [Steven VerMulm] but found []
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at com.jostens.qa.testcases.LoginPageTest.loginTest(LoginPageTest.java:68)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.LoginPageTest@3bf9ce3e]" started-at="2021-02-07T14:12:05 CST" name="afterMethod" finished-at="2021-02-07T14:12:08 CST" duration-ms="2191" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginTest status=FAILURE method=LoginPageTest.loginTest()[pri:0, instance:com.jostens.qa.testcases.LoginPageTest@3bf9ce3e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.jostens.qa.testcases.LoginPageTest@3bf9ce3e]" started-at="2021-01-31T21:21:57 CST" name="afterSuite" finished-at="2021-01-31T21:21:58 CST" duration-ms="1471" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.jostens.qa.testcases.LoginPageTest@3bf9ce3e]" started-at="2021-02-07T14:14:10 CST" name="afterSuite" finished-at="2021-02-07T14:14:11 CST" duration-ms="869" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- com.jostens.qa.testcases.LoginPageTest -->
       <class name="com.jostens.qa.testcases.PaymentPageTest">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.jostens.qa.testcases.PaymentPageTest@53fdffa1]" started-at="2021-01-31T21:21:57 CST" name="beforeClass" finished-at="2021-01-31T21:21:57 CST" duration-ms="105" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.jostens.qa.testcases.PaymentPageTest@53fdffa1]" started-at="2021-02-07T14:14:10 CST" name="beforeClass" finished-at="2021-02-07T14:14:10 CST" duration-ms="43" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[\src\main\java\com\jostens\qa\testdata\Jostens2.xlsx]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="paymentPageTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.PaymentPageTest@53fdffa1]" started-at="2021-01-31T21:21:57 CST" name="paymentPageTest" data-provider="inputs" finished-at="2021-01-31T21:21:57 CST" duration-ms="1" status="SKIP">
+        <test-method signature="paymentPageTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.PaymentPageTest@53fdffa1]" started-at="2021-02-07T14:14:10 CST" name="paymentPageTest" data-provider="inputs" finished-at="2021-02-07T14:14:10 CST" duration-ms="2" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -798,7 +861,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: Skipping '@Test=gtest' due to a lack of data
-at com.jostens.qa.testcases.PaymentPageTest.paymentPageTest(PaymentPageTest.java:47)
+at com.jostens.qa.testcases.PaymentPageTest.paymentPageTest(PaymentPageTest.java:50)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -833,7 +896,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- paymentPageTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.PaymentPageTest@53fdffa1]" started-at="2021-01-31T21:21:57 CST" name="afterMethod" finished-at="2021-01-31T21:21:57 CST" duration-ms="48" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.PaymentPageTest@53fdffa1]" started-at="2021-02-07T14:14:10 CST" name="afterMethod" finished-at="2021-02-07T14:14:10 CST" duration-ms="35" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -846,11 +909,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
         </test-method> <!-- afterMethod -->
       </class> <!-- com.jostens.qa.testcases.PaymentPageTest -->
       <class name="com.jostens.qa.testcases.SearchSchoolPageTest">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.jostens.qa.testcases.SearchSchoolPageTest@16610890]" started-at="2021-01-31T21:19:48 CST" name="beforeClass" finished-at="2021-01-31T21:19:48 CST" duration-ms="230" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.jostens.qa.testcases.SearchSchoolPageTest@16610890]" started-at="2021-02-07T14:12:08 CST" name="beforeClass" finished-at="2021-02-07T14:12:08 CST" duration-ms="168" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[\src\main\java\com\jostens\qa\testdata\Jostens2.xlsx]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="searchSchoolTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.SearchSchoolPageTest@16610890]" started-at="2021-01-31T21:19:48 CST" name="searchSchoolTest" data-provider="inputs" finished-at="2021-01-31T21:19:51 CST" duration-ms="2431" status="PASS">
+        <test-method signature="searchSchoolTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.SearchSchoolPageTest@16610890]" started-at="2021-02-07T14:12:08 CST" name="searchSchoolTest" data-provider="inputs" finished-at="2021-02-07T14:12:10 CST" duration-ms="2354" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -864,7 +934,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="2">
               <value>
-                <![CDATA[Success - 2021/01/31 21:16:33]]>
+                <![CDATA[Success - 2021/02/06 21:44:14]]>
               </value>
             </param>
             <param index="3">
@@ -876,7 +946,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchSchoolTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.SearchSchoolPageTest@16610890]" started-at="2021-01-31T21:19:51 CST" name="afterMethod" finished-at="2021-01-31T21:19:51 CST" duration-ms="385" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.SearchSchoolPageTest@16610890]" started-at="2021-02-07T14:12:10 CST" name="afterMethod" finished-at="2021-02-07T14:12:11 CST" duration-ms="350" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -887,7 +957,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="searchSchoolTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.SearchSchoolPageTest@16610890]" started-at="2021-01-31T21:19:51 CST" name="searchSchoolTest" data-provider="inputs" finished-at="2021-01-31T21:19:55 CST" duration-ms="4035" status="PASS">
+        <test-method signature="searchSchoolTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.SearchSchoolPageTest@16610890]" started-at="2021-02-07T14:12:11 CST" name="searchSchoolTest" data-provider="inputs" finished-at="2021-02-07T14:12:13 CST" duration-ms="2216" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -901,7 +971,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="2">
               <value>
-                <![CDATA[Success - 2021/01/31 21:16:36]]>
+                <![CDATA[Success - 2021/02/06 21:44:17]]>
               </value>
             </param>
             <param index="3">
@@ -913,7 +983,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchSchoolTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.SearchSchoolPageTest@16610890]" started-at="2021-01-31T21:19:55 CST" name="afterMethod" finished-at="2021-01-31T21:19:55 CST" duration-ms="177" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.SearchSchoolPageTest@16610890]" started-at="2021-02-07T14:12:13 CST" name="afterMethod" finished-at="2021-02-07T14:12:13 CST" duration-ms="163" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -926,11 +996,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
         </test-method> <!-- afterMethod -->
       </class> <!-- com.jostens.qa.testcases.SearchSchoolPageTest -->
       <class name="com.jostens.qa.testcases.ShoppingCartPageTest">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.jostens.qa.testcases.ShoppingCartPageTest@383bfa16]" started-at="2021-01-31T21:21:27 CST" name="beforeClass" finished-at="2021-01-31T21:21:27 CST" duration-ms="121" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.jostens.qa.testcases.ShoppingCartPageTest@383bfa16]" started-at="2021-02-07T14:13:41 CST" name="beforeClass" finished-at="2021-02-07T14:13:41 CST" duration-ms="42" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[\src\main\java\com\jostens\qa\testdata\Jostens2.xlsx]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="addProductToCartTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.ShoppingCartPageTest@383bfa16]" started-at="2021-01-31T21:21:27 CST" name="addProductToCartTest" data-provider="inputs" finished-at="2021-01-31T21:21:29 CST" duration-ms="1763" status="PASS">
+        <test-method signature="addProductToCartTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.ShoppingCartPageTest@383bfa16]" started-at="2021-02-07T14:13:41 CST" name="addProductToCartTest" data-provider="inputs" finished-at="2021-02-07T14:13:43 CST" duration-ms="1983" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -964,7 +1041,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="6">
               <value>
-                <![CDATA[Success - 2021/01/31 21:18:12]]>
+                <![CDATA[Success - 2021/02/06 21:45:55]]>
               </value>
             </param>
             <param index="7">
@@ -976,7 +1053,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductToCartTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.ShoppingCartPageTest@383bfa16]" started-at="2021-01-31T21:21:29 CST" name="afterMethod" finished-at="2021-01-31T21:21:29 CST" duration-ms="113" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.ShoppingCartPageTest@383bfa16]" started-at="2021-02-07T14:13:43 CST" name="afterMethod" finished-at="2021-02-07T14:13:43 CST" duration-ms="103" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -987,7 +1064,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="addProductToCartTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.ShoppingCartPageTest@383bfa16]" started-at="2021-01-31T21:21:29 CST" name="addProductToCartTest" data-provider="inputs" finished-at="2021-01-31T21:21:29 CST" duration-ms="101" status="PASS">
+        <test-method signature="addProductToCartTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.ShoppingCartPageTest@383bfa16]" started-at="2021-02-07T14:13:43 CST" name="addProductToCartTest" data-provider="inputs" finished-at="2021-02-07T14:13:44 CST" duration-ms="98" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1021,7 +1098,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="6">
               <value>
-                <![CDATA[Success - 2021/01/31 21:18:12]]>
+                <![CDATA[Success - 2021/02/06 21:45:55]]>
               </value>
             </param>
             <param index="7">
@@ -1033,7 +1110,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductToCartTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.ShoppingCartPageTest@383bfa16]" started-at="2021-01-31T21:21:29 CST" name="afterMethod" finished-at="2021-01-31T21:21:30 CST" duration-ms="125" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.ShoppingCartPageTest@383bfa16]" started-at="2021-02-07T14:13:44 CST" name="afterMethod" finished-at="2021-02-07T14:13:44 CST" duration-ms="115" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1044,7 +1121,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="addProductToCartTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.ShoppingCartPageTest@383bfa16]" started-at="2021-01-31T21:21:30 CST" name="addProductToCartTest" data-provider="inputs" finished-at="2021-01-31T21:21:30 CST" duration-ms="115" status="PASS">
+        <test-method signature="addProductToCartTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.ShoppingCartPageTest@383bfa16]" started-at="2021-02-07T14:13:44 CST" name="addProductToCartTest" data-provider="inputs" finished-at="2021-02-07T14:13:44 CST" duration-ms="114" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1078,7 +1155,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="6">
               <value>
-                <![CDATA[Success - 2021/01/31 21:18:12]]>
+                <![CDATA[Success - 2021/02/06 21:45:56]]>
               </value>
             </param>
             <param index="7">
@@ -1090,7 +1167,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductToCartTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.ShoppingCartPageTest@383bfa16]" started-at="2021-01-31T21:21:30 CST" name="afterMethod" finished-at="2021-01-31T21:21:30 CST" duration-ms="116" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.ShoppingCartPageTest@383bfa16]" started-at="2021-02-07T14:13:44 CST" name="afterMethod" finished-at="2021-02-07T14:13:44 CST" duration-ms="110" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1103,11 +1180,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
         </test-method> <!-- afterMethod -->
       </class> <!-- com.jostens.qa.testcases.ShoppingCartPageTest -->
       <class name="com.jostens.qa.testcases.ProductDetailPageTest">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.jostens.qa.testcases.ProductDetailPageTest@71def8f8]" started-at="2021-01-31T21:19:55 CST" name="beforeClass" finished-at="2021-01-31T21:19:56 CST" duration-ms="165" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.jostens.qa.testcases.ProductDetailPageTest@71def8f8]" started-at="2021-02-07T14:12:13 CST" name="beforeClass" finished-at="2021-02-07T14:12:13 CST" duration-ms="55" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[\src\main\java\com\jostens\qa\testdata\Jostens2.xlsx]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="productSearchTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.ProductDetailPageTest@71def8f8]" started-at="2021-01-31T21:19:56 CST" name="productSearchTest" data-provider="inputs" finished-at="2021-01-31T21:20:28 CST" duration-ms="32322" status="PASS">
+        <test-method signature="productSearchTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.ProductDetailPageTest@71def8f8]" started-at="2021-02-07T14:12:13 CST" name="productSearchTest" data-provider="inputs" finished-at="2021-02-07T14:12:45 CST" duration-ms="32180" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1173,7 +1257,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productSearchTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.ProductDetailPageTest@71def8f8]" started-at="2021-01-31T21:20:28 CST" name="afterMethod" finished-at="2021-01-31T21:20:28 CST" duration-ms="147" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.ProductDetailPageTest@71def8f8]" started-at="2021-02-07T14:12:45 CST" name="afterMethod" finished-at="2021-02-07T14:12:45 CST" duration-ms="157" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1184,7 +1268,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="productSearchTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.ProductDetailPageTest@71def8f8]" started-at="2021-01-31T21:20:28 CST" name="productSearchTest" data-provider="inputs" finished-at="2021-01-31T21:20:58 CST" duration-ms="30099" status="PASS">
+        <test-method signature="productSearchTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.ProductDetailPageTest@71def8f8]" started-at="2021-02-07T14:12:45 CST" name="productSearchTest" data-provider="inputs" finished-at="2021-02-07T14:13:14 CST" duration-ms="28293" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1250,7 +1334,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productSearchTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.ProductDetailPageTest@71def8f8]" started-at="2021-01-31T21:20:58 CST" name="afterMethod" finished-at="2021-01-31T21:20:58 CST" duration-ms="143" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.ProductDetailPageTest@71def8f8]" started-at="2021-02-07T14:13:14 CST" name="afterMethod" finished-at="2021-02-07T14:13:14 CST" duration-ms="123" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1261,7 +1345,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="productSearchTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.ProductDetailPageTest@71def8f8]" started-at="2021-01-31T21:20:58 CST" name="productSearchTest" data-provider="inputs" finished-at="2021-01-31T21:21:27 CST" duration-ms="28834" status="PASS">
+        <test-method signature="productSearchTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.jostens.qa.testcases.ProductDetailPageTest@71def8f8]" started-at="2021-02-07T14:13:14 CST" name="productSearchTest" data-provider="inputs" finished-at="2021-02-07T14:13:41 CST" duration-ms="27246" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1327,7 +1411,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productSearchTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.ProductDetailPageTest@71def8f8]" started-at="2021-01-31T21:21:27 CST" name="afterMethod" finished-at="2021-01-31T21:21:27 CST" duration-ms="121" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jostens.qa.testcases.ProductDetailPageTest@71def8f8]" started-at="2021-02-07T14:13:41 CST" name="afterMethod" finished-at="2021-02-07T14:13:41 CST" duration-ms="149" status="PASS">
           <params>
             <param index="0">
               <value>

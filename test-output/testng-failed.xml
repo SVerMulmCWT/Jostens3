@@ -8,9 +8,19 @@
     <parameter name="os" value="Windows"/>
     <parameter name="os_version" value="10"/>
     <parameter name="browser" value="Chrome"/>
+    <parameter name="dataTable" value="\src\main\java\com\jostens\qa\testdata\Jostens2.xlsx"/>
     <parameter name="browser_version" value="81"/>
     <parameter name="browserStack" value="n"/>
     <classes>
+      <class name="com.jostens.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="loginTest"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.jostens.qa.testcases.LoginPageTest -->
       <class name="com.jostens.qa.testcases.PaymentPageTest">
         <methods>
           <include name="paymentPageTest" invocation-numbers="0"/>

@@ -35,6 +35,7 @@ import com.jostens.qa.pages.ProductDetailPage;
 import com.jostens.qa.pages.ShoppingCartPage;
 import com.jostens.qa.util.EventHandler;
 import com.jostens.qa.util.ExcelUtil;
+import com.jostens.qa.util.ExtentFactory;
 
 public class TestBase {
 	//Initialize BrowserStack Variable(s)
@@ -163,6 +164,9 @@ public class TestBase {
 	@BeforeTest
 	@Parameters({ "browser", "browser_version", "os", "os_version", "browserStack" })
 	public void beforeSuite(String browserName, String browser_version, String os, String os_version, String browserStack) {
+		//Delete previous Extent Report
+		ExtentFactory.deleteExtentReport();
+		
 		//Initialize Variable(s)
 		System.out.println("Performing the script's setups (@BeforeSuite)");
 		initializeDriver(browserName, browser_version, os, os_version, browserStack); //Sets up WebDriver with Listeners

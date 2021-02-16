@@ -83,11 +83,8 @@ public class ECheckoutPageTest extends TestBase {
 		
 		checkpoint = checkoutPage.verifyShippingInfo(checkpoint, email, address, city, state, zipCode, country);
 		
-		if (!dataRow.equals("3")) {
-			//Assert all checkpoints
-			checkpoint.assertAll();
-		}
-		
+		//Assert all checkpoints
+		checkpoint.assertAll();
 		
 		//Change the Excel Datasheet for the next @Test's input parameters
 		excelMethods.setSheetName("Checkout");

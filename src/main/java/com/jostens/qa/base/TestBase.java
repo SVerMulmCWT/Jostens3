@@ -185,6 +185,12 @@ public class TestBase {
 	@AfterMethod
 	public void afterMethod(ITestResult result) throws IOException {
 		if(result.getStatus() == ITestResult.FAILURE) {
+			try {
+				Thread.sleep(1000);
+			} catch (Exception e) {
+				System.out.println(e);
+			}
+			
 			//Do not output to Excel File, if performing the @Test=aloginTest, since there is no excel file for it
 			if (!result.getName().equals("loginTest")) {
 				excelMethods.setDataTableCell("Failure - " + excelMethods.getCurrentDateTime(), iteration, column);

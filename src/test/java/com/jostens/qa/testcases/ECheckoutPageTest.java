@@ -40,16 +40,16 @@ public class ECheckoutPageTest extends TestBase {
 		checkoutPage = new CheckoutPage(eDriver, reportLogger);
 	}
 	
-	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
-	public void checkoutListVerification(String product, String productQuantity, String productPrice, String checkoutPageTitle, String email, String enableEmails, String firstName, String lastName, String address, String city, String country, String state, String zipCode, String phoneNumber, String saveInfo, String finalResult, String notes, String dataRow) {
-		System.out.println("@Test - checkoutListVerification()");
-		
-		//Verify that the checkout products matches expectations
-		checkpoint = checkoutPage.verifyProductFromCheckout(checkpoint, product, productQuantity, productPrice);
-		
-//		//Assert all checkpoints
-//		checkpoint.assertAll();
-	}
+//	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
+//	public void checkoutListVerification(String product, String productQuantity, String productPrice, String checkoutPageTitle, String email, String enableEmails, String firstName, String lastName, String address, String city, String country, String state, String zipCode, String phoneNumber, String saveInfo, String finalResult, String notes, String dataRow) {
+//		System.out.println("@Test - checkoutListVerification()");
+//		
+//		//Verify that the checkout products matches expectations
+//		checkpoint = checkoutPage.verifyProductFromCheckout(checkpoint, product, productQuantity, productPrice);
+//		
+////		//Assert all checkpoints
+////		checkpoint.assertAll();
+//	}
 	
 	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
 	public void proceedWithCheckoutTest(String product, String productQuantity, String productPrice, String checkoutPageTitle, String email, String enableEmails, String firstName, String lastName, String address, String city, String country, String state, String zipCode, String phoneNumber, String saveInfo, String finalResult, String notes, String dataRow) throws InterruptedException {

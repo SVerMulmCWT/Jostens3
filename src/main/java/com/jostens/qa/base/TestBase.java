@@ -186,7 +186,7 @@ public class TestBase {
 	public void afterMethod(ITestResult result) throws IOException {
 		if(result.getStatus() == ITestResult.FAILURE) {
 			//Do not output to Excel File, if performing the @Test=aloginTest, since there is no excel file for it
-			if (!result.getName().equals("aloginTest")) {
+			if (!result.getName().equals("loginTest")) {
 				excelMethods.setDataTableCell("Failure - " + excelMethods.getCurrentDateTime(), iteration, column);
 			}
 			

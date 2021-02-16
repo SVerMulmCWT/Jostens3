@@ -118,6 +118,12 @@ public class LoginPage extends LoginPageLocators {
 	 * Used by: 'LoginPageTest.java' to Check/Assert the Passed/Failed status of a login test
 	 */
 	public SoftAssert verifySuccessfulLogin(SoftAssert softAssert, String expectedUserName) {
+		try {
+			Thread.sleep(2000);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
 		//Check if the correct full name is being displayed as the 'welcome login text'
 		softAssert.assertEquals(usernameWelcome.getText(), expectedUserName);
 		

@@ -167,7 +167,7 @@ public class TestBase {
 		String os = "Windows";
 		String os_version = "10";
 		String browserStack = "n";
-		System.out.println("hi");
+		
 		//Delete previous Extent Report
 		ExtentFactory.deleteExtentReport();
 		

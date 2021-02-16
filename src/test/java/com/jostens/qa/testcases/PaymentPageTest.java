@@ -42,7 +42,7 @@ public class PaymentPageTest extends TestBase {
 		paymentPage = new PaymentPage(eDriver, reportLogger);
 	}
 	
-	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
+	@Test(priority=7, dataProvider="inputs", dataProviderClass=ExcelUtil.class)
 	public void gPaymentPageTest(String creditCardNumber, String cardHolderName, String expiryDate, String securityCode, String expectedErrorMessage, String finalStatus, String notes, String dataRow) throws InterruptedException {
 		System.out.println("@Test - PaymentPageTest()");
 		

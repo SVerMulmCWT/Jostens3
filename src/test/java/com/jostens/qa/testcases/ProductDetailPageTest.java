@@ -43,7 +43,7 @@ public class ProductDetailPageTest extends TestBase {
 	}
 	
 	//Test the product search functionality
-	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
+	@Test(priority=3, dataProvider="inputs", dataProviderClass=ExcelUtil.class)
 	public void cProductSearchTest(String product, String productPageTitle, String productColor, String productSize, String logoNumber, String logoPosition, String logoLeftValue, String logoTopValue, String logoWidthValue, String logoHeightValue, String finalResult, String dataRow) throws InterruptedException {
 		System.out.println("@Test - ProductDetailPageTest()");
 		

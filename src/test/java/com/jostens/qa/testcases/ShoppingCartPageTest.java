@@ -41,7 +41,7 @@ public class ShoppingCartPageTest extends TestBase {
 		shoppingCartPage = new ShoppingCartPage(eDriver, reportLogger);
 	}
 	
-	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
+	@Test(priority=4, dataProvider="inputs", dataProviderClass=ExcelUtil.class)
 	public void dAddProductToCartTest(String productName, String shoppingCartTitle, String pricePerItem, String itemCount, String itemPriceTotal, String itemSubtotal, String finalResult, String dataRow) throws InterruptedException {
 		System.out.println("@Test - ShoppingCartPageTest()");
 		

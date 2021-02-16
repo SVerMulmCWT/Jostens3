@@ -41,7 +41,7 @@ public class CheckoutPageTest extends TestBase {
 		checkoutPage = new CheckoutPage(eDriver, reportLogger);
 	}
 	
-	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
+	@Test(priority=5, dataProvider="inputs", dataProviderClass=ExcelUtil.class)
 	public void eProceedWithCheckoutTest(String product, String productQuantity, String productPrice, String checkoutPageTitle, String email, String enableEmails, String firstName, String lastName, String address, String city, String country, String state, String zipCode, String phoneNumber, String saveInfo, String finalResult, String notes, String dataRow) throws InterruptedException {
 		System.out.println("@Test - proceedWithCheckoutTest()");
 		
@@ -80,7 +80,7 @@ public class CheckoutPageTest extends TestBase {
 		excelMethods.setSheetName("Checkout");
 	}
 	
-	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
+	@Test(priority=6, dataProvider="inputs", dataProviderClass=ExcelUtil.class)
 	public void fCheckoutListVerification(String product, String productQuantity, String productPrice, String checkoutPageTitle, String email, String enableEmails, String firstName, String lastName, String address, String city, String country, String state, String zipCode, String phoneNumber, String saveInfo, String finalResult, String notes, String dataRow) {
 		System.out.println("@Test - checkoutListVerification()");
 		

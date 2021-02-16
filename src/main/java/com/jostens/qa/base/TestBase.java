@@ -164,9 +164,7 @@ public class TestBase {
 	public void beforeSuite(String browserName, String browser_version, String os, String os_version, String browserStack) {
 		//Delete previous Extent Report
 		ExtentFactory.deleteExtentReport();
-		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		browserName = "chrome";
-		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		
 		//Initialize Variable(s)
 		System.out.println("Performing the script's setups (@BeforeSuite)");
 		initializeDriver(browserName, browser_version, os, os_version, browserStack); //Sets up WebDriver with Listeners

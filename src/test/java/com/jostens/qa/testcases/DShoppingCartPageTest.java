@@ -22,10 +22,9 @@ public class DShoppingCartPageTest extends TestBase {
 	//Setup variable(s) and other info for the class
 	@BeforeClass
 	public void beforeClass() {
-		String excelPath = "\\src\\main\\java\\com\\jostens\\qa\\testdata\\Jostens.xlsx";
 		//Initialize Variable(s)
 		excelMethods = new ExcelUtil();
-		excelMethods.setDataTablePath(excelPath);
+//		excelMethods.setDataTablePath(excelPath);
 		excelMethods.setSheetName("Shopping Cart");
 		column = 7;
 		

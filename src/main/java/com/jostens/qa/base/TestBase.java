@@ -196,8 +196,8 @@ public class TestBase {
 			reportLogger.log(LogStatus.FAIL,  "The Test Case that failed is: " + result.getName()); //adds name to ExtentReport
 			reportLogger.log(LogStatus.FAIL,  "The Test Case that failed is: " + result.getThrowable()); //adds error/exception to ExtentReport
 			
-			String screenshotPath = TestUtil.getScreenshot(eDriver, result.getName());
-			reportLogger.log(LogStatus.FAIL,  reportLogger.addScreenCapture(screenshotPath)); //adds screenshot to ExtentReport
+//			String screenshotPath = TestUtil.getScreenshot(eDriver, result.getName());
+//			reportLogger.log(LogStatus.FAIL,  reportLogger.addScreenCapture(screenshotPath)); //adds screenshot to ExtentReport
 		} else if (result.getStatus() == ITestResult.SKIP) {
 			System.out.println("The Test Case that was skipped is: " + result.getName());
 			reportLogger.log(LogStatus.SKIP,  "The Test Case that was skipped is: " + result.getName());

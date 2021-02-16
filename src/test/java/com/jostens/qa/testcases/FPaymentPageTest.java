@@ -49,22 +49,22 @@ public class FPaymentPageTest extends TestBase {
 			throw new SkipException("Skipping '@Test=gtest' due to a lack of data");
 		}
 		
-		//Initialize Variable(s)
-		checkpoint = new SoftAssert(); //SoftAssert Setup (for identifying checkpoints)
-		iteration = Integer.valueOf(dataRow); //Indicates which row of Excel data the @Test is reading & which row to output the results
-		
-		//Click to continue to the payment page
-		paymentPage.proceedToPayment();
-		
-		//Enter the user's credit card info
-		paymentPage.enterCreditCardInfo(creditCardNumber, cardHolderName, expiryDate, securityCode);
-		
-		//Click 'Pay Now' to confirm payment
-		paymentPage.proceedToPayment();
-		
-		Thread.sleep(12000);
-		
-		//Check if the expected error message appears
-		checkpoint = paymentPage.verifyPayment(checkpoint, expectedErrorMessage);
+//		//Initialize Variable(s)
+//		checkpoint = new SoftAssert(); //SoftAssert Setup (for identifying checkpoints)
+//		iteration = Integer.valueOf(dataRow); //Indicates which row of Excel data the @Test is reading & which row to output the results
+//		
+//		//Click to continue to the payment page
+//		paymentPage.proceedToPayment();
+//		
+//		//Enter the user's credit card info
+//		paymentPage.enterCreditCardInfo(creditCardNumber, cardHolderName, expiryDate, securityCode);
+//		
+//		//Click 'Pay Now' to confirm payment
+//		paymentPage.proceedToPayment();
+//		
+//		Thread.sleep(12000);
+//		
+//		//Check if the expected error message appears
+//		checkpoint = paymentPage.verifyPayment(checkpoint, expectedErrorMessage);
 	}
 }

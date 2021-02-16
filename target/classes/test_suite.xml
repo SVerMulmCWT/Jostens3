@@ -12,12 +12,12 @@
 	<test name="Regression Chrome">
 		
 		<classes>
-			<class name="com.jostens.qa.testcases.LoginPageTest"></class>
- 			<class name="com.jostens.qa.testcases.SearchSchoolPageTest"></class>
- 			<class name="com.jostens.qa.testcases.ProductDetailPageTest"></class>
- 			<class name="com.jostens.qa.testcases.ShoppingCartPageTest"></class>
- 			<class name="com.jostens.qa.testcases.CheckoutPageTest"></class>
- 			<class name="com.jostens.qa.testcases.PaymentPageTest"></class>
+			<class name="com.jostens.qa.testcases.ALoginPageTest"></class>
+ 			<class name="com.jostens.qa.testcases.BSearchSchoolPageTest"></class>
+ 			<class name="com.jostens.qa.testcases.CProductDetailPageTest"></class>
+ 			<class name="com.jostens.qa.testcases.DShoppingCartPageTest"></class>
+ 			<class name="com.jostens.qa.testcases.ECheckoutPageTest"></class>
+ 			<class name="com.jostens.qa.testcases.FPaymentPageTest"></class>
 		</classes>
 	</test>
 	

@@ -39,8 +39,11 @@ import com.jostens.qa.util.ExtentFactory;
 
 public class TestBase {
 	//Initialize BrowserStack Variable(s)
-	public static final String USERNAME = "johndang1";
-	public static final String AUTOMATE_KEY = "ZDrTyrS1hQrUixbHrJVA";
+//	public static final String USERNAME = "johndang1";
+	public static final String USERNAME = "stevenvermulm2";
+//	public static final String AUTOMATE_KEY = "ZDrTyrS1hQrUixbHrJVA";
+	public static final String AUTOMATE_KEY = "G3n8oVqtkEHjukBqwpXw";
+//	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 	
 	//Define Variable(s)
@@ -166,7 +169,7 @@ public class TestBase {
 		String browser_version = "81";
 		String os = "Windows";
 		String os_version = "10";
-		String browserStack = "n";
+		String browserStack = "Y";
 		
 		//Delete previous Extent Report
 		ExtentFactory.deleteExtentReport();

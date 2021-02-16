@@ -11,15 +11,6 @@
 	
 	<test name="Regression Chrome">
 		
-		<parameter name="os" value="Windows" />
-		<parameter name="os_version" value="10" />
-		<parameter name="browser" value="Chrome" />
-		<parameter name="browser_version" value="81" />
-		<parameter name="browserStack" value="n" />
-<!-- 		<parameter name="dataTable" value="" /> -->
-		
-		<parameter name="dataTable" value="\src\main\java\com\jostens\qa\testdata\Jostens.xlsx" />
-		
 		<classes>
 			<class name="com.jostens.qa.testcases.LoginPageTest"></class>
  			<class name="com.jostens.qa.testcases.SearchSchoolPageTest"></class>

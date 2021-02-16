@@ -160,8 +160,14 @@ public class TestBase {
 	
 //	@BeforeSuite
 	@BeforeTest
-	@Parameters({ "browser", "browser_version", "os", "os_version", "browserStack" })
-	public void beforeSuite(String browserName, String browser_version, String os, String os_version, String browserStack) {
+//	@Parameters({ "browser", "browser_version", "os", "os_version", "browserStack" })
+	public void beforeSuite() {
+		String browserName = "Chrome";
+		String browser_version = "81";
+		String os = "Windows";
+		String os_version = "10";
+		String browserStack = "n";
+		System.out.println("hi");
 		//Delete previous Extent Report
 		ExtentFactory.deleteExtentReport();
 		

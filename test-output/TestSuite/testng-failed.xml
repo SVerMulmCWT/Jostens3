@@ -7,8 +7,6 @@
   <test thread-count="5" name="Regression Chrome(failed)">
     <parameter name="os" value="Windows"/>
     <parameter name="os_version" value="10"/>
-    <parameter name="browser" value="Chrome"/>
-    <parameter name="dataTable" value="\src\main\java\com\jostens\qa\testdata\Jostens.xlsx"/>
     <parameter name="browser_version" value="81"/>
     <parameter name="browserStack" value="n"/>
     <classes>
@@ -17,19 +15,56 @@
           <include name="afterMethod"/>
           <include name="beforeClass"/>
           <include name="afterSuite"/>
-          <include name="productSearchTest" invocation-numbers="1"/>
+          <include name="productSearchTest"/>
           <include name="beforeSuite"/>
         </methods>
       </class> <!-- com.jostens.qa.testcases.ProductDetailPageTest -->
       <class name="com.jostens.qa.testcases.ShoppingCartPageTest">
         <methods>
-          <include name="addProductToCartTest" invocation-numbers="0 1 2"/>
+          <include name="addProductToCartTest"/>
           <include name="afterMethod"/>
           <include name="afterSuite"/>
           <include name="beforeClass"/>
           <include name="beforeSuite"/>
         </methods>
       </class> <!-- com.jostens.qa.testcases.ShoppingCartPageTest -->
+      <class name="com.jostens.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="loginTest"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.jostens.qa.testcases.LoginPageTest -->
+      <class name="com.jostens.qa.testcases.PaymentPageTest">
+        <methods>
+          <include name="paymentPageTest"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+          <include name="beforeClass"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- com.jostens.qa.testcases.PaymentPageTest -->
+      <class name="com.jostens.qa.testcases.SearchSchoolPageTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="searchSchoolTest"/>
+          <include name="afterSuite"/>
+          <include name="beforeClass"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- com.jostens.qa.testcases.SearchSchoolPageTest -->
+      <class name="com.jostens.qa.testcases.CheckoutPageTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="afterSuite"/>
+          <include name="checkoutListVerification"/>
+          <include name="proceedWithCheckoutTest"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- com.jostens.qa.testcases.CheckoutPageTest -->
     </classes>
   </test> <!-- Regression Chrome(failed) -->
 </suite> <!-- Failed suite [TestSuite] -->

@@ -155,7 +155,7 @@ public class TestBase {
 		eDriver.manage().window().maximize();
 		eDriver.manage().deleteAllCookies();
 		eDriver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-		eDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		eDriver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 	}
 	
 //	@BeforeSuite

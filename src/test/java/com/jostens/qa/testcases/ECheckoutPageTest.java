@@ -1,7 +1,6 @@
 package com.jostens.qa.testcases;
 
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -11,12 +10,12 @@ import com.jostens.qa.util.ExcelUtil;
 import com.jostens.qa.util.ExtentFactory;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class CheckoutPageTest extends TestBase {
+public class ECheckoutPageTest extends TestBase {
 	//Define Variable(s)
 	SoftAssert checkpoint;
 	
 	//Constructor
-	public CheckoutPageTest() {
+	public ECheckoutPageTest() {
 		super();
 	}
 	
@@ -41,8 +40,19 @@ public class CheckoutPageTest extends TestBase {
 		checkoutPage = new CheckoutPage(eDriver, reportLogger);
 	}
 	
-	@Test(priority=5, dataProvider="inputs", dataProviderClass=ExcelUtil.class)
-	public void eProceedWithCheckoutTest(String product, String productQuantity, String productPrice, String checkoutPageTitle, String email, String enableEmails, String firstName, String lastName, String address, String city, String country, String state, String zipCode, String phoneNumber, String saveInfo, String finalResult, String notes, String dataRow) throws InterruptedException {
+	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
+	public void checkoutListVerification(String product, String productQuantity, String productPrice, String checkoutPageTitle, String email, String enableEmails, String firstName, String lastName, String address, String city, String country, String state, String zipCode, String phoneNumber, String saveInfo, String finalResult, String notes, String dataRow) {
+		System.out.println("@Test - checkoutListVerification()");
+		
+		//Verify that the checkout products matches expectations
+		checkpoint = checkoutPage.verifyProductFromCheckout(checkpoint, product, productQuantity, productPrice);
+		
+//		//Assert all checkpoints
+//		checkpoint.assertAll();
+	}
+	
+	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
+	public void proceedWithCheckoutTest(String product, String productQuantity, String productPrice, String checkoutPageTitle, String email, String enableEmails, String firstName, String lastName, String address, String city, String country, String state, String zipCode, String phoneNumber, String saveInfo, String finalResult, String notes, String dataRow) throws InterruptedException {
 		System.out.println("@Test - proceedWithCheckoutTest()");
 		
 		//Initialize Variable(s)
@@ -78,16 +88,5 @@ public class CheckoutPageTest extends TestBase {
 		
 		//Change the Excel Datasheet for the next @Test's input parameters
 		excelMethods.setSheetName("Checkout");
-	}
-	
-	@Test(priority=6, dataProvider="inputs", dataProviderClass=ExcelUtil.class)
-	public void fCheckoutListVerification(String product, String productQuantity, String productPrice, String checkoutPageTitle, String email, String enableEmails, String firstName, String lastName, String address, String city, String country, String state, String zipCode, String phoneNumber, String saveInfo, String finalResult, String notes, String dataRow) {
-		System.out.println("@Test - checkoutListVerification()");
-		
-		//Verify that the checkout products matches expectations
-		checkpoint = checkoutPage.verifyProductFromCheckout(checkpoint, product, productQuantity, productPrice);
-		
-//		//Assert all checkpoints
-//		checkpoint.assertAll();
 	}
 }

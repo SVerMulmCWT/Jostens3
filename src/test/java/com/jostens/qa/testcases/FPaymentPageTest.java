@@ -2,7 +2,6 @@ package com.jostens.qa.testcases;
 
 import org.testng.SkipException;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -12,12 +11,12 @@ import com.jostens.qa.util.ExcelUtil;
 import com.jostens.qa.util.ExtentFactory;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class PaymentPageTest extends TestBase {
+public class FPaymentPageTest extends TestBase {
 	//Define Variable(s)
 	SoftAssert checkpoint;
 	
 	//Constructor
-	public PaymentPageTest() {
+	public FPaymentPageTest() {
 		super();
 	}
 	
@@ -42,8 +41,8 @@ public class PaymentPageTest extends TestBase {
 		paymentPage = new PaymentPage(eDriver, reportLogger);
 	}
 	
-	@Test(priority=7, dataProvider="inputs", dataProviderClass=ExcelUtil.class)
-	public void gPaymentPageTest(String creditCardNumber, String cardHolderName, String expiryDate, String securityCode, String expectedErrorMessage, String finalStatus, String notes, String dataRow) throws InterruptedException {
+	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
+	public void paymentPageTest(String creditCardNumber, String cardHolderName, String expiryDate, String securityCode, String expectedErrorMessage, String finalStatus, String notes, String dataRow) throws InterruptedException {
 		System.out.println("@Test - PaymentPageTest()");
 		
 		if (creditCardNumber.equals("") || creditCardNumber == null) {
@@ -67,6 +66,5 @@ public class PaymentPageTest extends TestBase {
 		
 		//Check if the expected error message appears
 		checkpoint = paymentPage.verifyPayment(checkpoint, expectedErrorMessage);
-		
 	}
 }

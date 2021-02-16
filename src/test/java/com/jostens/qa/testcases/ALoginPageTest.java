@@ -1,7 +1,6 @@
 package com.jostens.qa.testcases;
 
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -11,13 +10,13 @@ import com.jostens.qa.util.ExcelUtil;
 import com.jostens.qa.util.ExtentFactory;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class LoginPageTest extends TestBase {
+public class ALoginPageTest extends TestBase {
 	
 	//Define Variable(s)
 	SoftAssert checkpoint;
 	
 	//Constructor
-	public LoginPageTest() {
+	public ALoginPageTest() {
 		super();
 	}
 	
@@ -44,7 +43,7 @@ public class LoginPageTest extends TestBase {
 	
 	//Test the login functionality
 	@Test(priority=1)
-	public void aLoginTest() {
+	public void loginTest() {
 		System.out.println("@Test - loginTest()");
 		
 		//Initialize Variable(s)

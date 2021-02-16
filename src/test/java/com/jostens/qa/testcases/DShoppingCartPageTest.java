@@ -1,7 +1,6 @@
 package com.jostens.qa.testcases;
 
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -11,12 +10,12 @@ import com.jostens.qa.util.ExcelUtil;
 import com.jostens.qa.util.ExtentFactory;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class ShoppingCartPageTest extends TestBase {
+public class DShoppingCartPageTest extends TestBase {
 	//Define Variable(s)
 	SoftAssert checkpoint;
 	
 	//Constructor
-	public ShoppingCartPageTest() {
+	public DShoppingCartPageTest() {
 		super();
 	}
 	
@@ -41,8 +40,8 @@ public class ShoppingCartPageTest extends TestBase {
 		shoppingCartPage = new ShoppingCartPage(eDriver, reportLogger);
 	}
 	
-	@Test(priority=4, dataProvider="inputs", dataProviderClass=ExcelUtil.class)
-	public void dAddProductToCartTest(String productName, String shoppingCartTitle, String pricePerItem, String itemCount, String itemPriceTotal, String itemSubtotal, String finalResult, String dataRow) throws InterruptedException {
+	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
+	public void addProductToCartTest(String productName, String shoppingCartTitle, String pricePerItem, String itemCount, String itemPriceTotal, String itemSubtotal, String finalResult, String dataRow) throws InterruptedException {
 		System.out.println("@Test - ShoppingCartPageTest()");
 		
 		//Initialize Variable(s)

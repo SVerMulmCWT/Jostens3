@@ -1,7 +1,6 @@
 package com.jostens.qa.testcases;
 
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -11,13 +10,13 @@ import com.jostens.qa.util.ExcelUtil;
 import com.jostens.qa.util.ExtentFactory;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class ProductDetailPageTest extends TestBase {
+public class CProductDetailPageTest extends TestBase {
 	
 	//Define Variable(s)
 	SoftAssert checkpoint;
 	
 	//Constructor
-	public ProductDetailPageTest() {
+	public CProductDetailPageTest() {
 		super();
 	}
 	
@@ -43,8 +42,8 @@ public class ProductDetailPageTest extends TestBase {
 	}
 	
 	//Test the product search functionality
-	@Test(priority=3, dataProvider="inputs", dataProviderClass=ExcelUtil.class)
-	public void cProductSearchTest(String product, String productPageTitle, String productColor, String productSize, String logoNumber, String logoPosition, String logoLeftValue, String logoTopValue, String logoWidthValue, String logoHeightValue, String finalResult, String dataRow) throws InterruptedException {
+	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
+	public void productSearchTest(String product, String productPageTitle, String productColor, String productSize, String logoNumber, String logoPosition, String logoLeftValue, String logoTopValue, String logoWidthValue, String logoHeightValue, String finalResult, String dataRow) throws InterruptedException {
 		System.out.println("@Test - ProductDetailPageTest()");
 		
 		//Initialize Variable(s)

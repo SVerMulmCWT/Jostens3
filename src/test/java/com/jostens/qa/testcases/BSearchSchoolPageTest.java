@@ -1,7 +1,6 @@
 package com.jostens.qa.testcases;
 
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -11,13 +10,13 @@ import com.jostens.qa.util.ExcelUtil;
 import com.jostens.qa.util.ExtentFactory;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class SearchSchoolPageTest extends TestBase {
+public class BSearchSchoolPageTest extends TestBase {
 	
 	//Define Variable(s)
 	SoftAssert checkpoint;
 	
 	//Constructor
-	public SearchSchoolPageTest() {
+	public BSearchSchoolPageTest() {
 		super();
 	}
 	
@@ -43,8 +42,8 @@ public class SearchSchoolPageTest extends TestBase {
 	}
 	
 	//Test the school search functionality
-	@Test(priority=2, dataProvider="inputs", dataProviderClass=ExcelUtil.class)
-	public void bSearchSchoolTest(String schoolName, String schoolStoreTitle, String finalStatus, String dataRow) {
+	@Test(dataProvider="inputs", dataProviderClass=ExcelUtil.class)
+	public void searchSchoolTest(String schoolName, String schoolStoreTitle, String finalStatus, String dataRow) {
 		System.out.println("@Test - SearchSchoolPageTest()");
 		
 		//Initialize Variable(s)

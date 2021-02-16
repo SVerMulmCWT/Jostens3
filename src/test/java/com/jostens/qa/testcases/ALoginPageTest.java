@@ -41,7 +41,7 @@ public class ALoginPageTest extends TestBase {
 	}
 	
 	//Test the login functionality
-	@Test(priority=1)
+	@Test()
 	public void loginTest() {
 		System.out.println("@Test - loginTest()");
 		
